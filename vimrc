@@ -33,6 +33,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_aggregate_errors = 0
 let g:syntastic_enable_balloons = 1
 let g:syntastic_c_remove_include_errors = 1
+"let g:syntastic_c_compiler = 'clang'
 
 " remap multiple-cursors key to be like Sublime
 let g:multi_cursor_use_default_mapping = 0
@@ -41,6 +42,23 @@ let g:multi_cursor_prev_key = '<C-p>'
 let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
 
-" theme
+" set colorscheme
 colorscheme tir_black
+"colorscheme szakdark
+"colorscheme neverness
+"colorscheme fu "bg color
+"colorscheme jellybeans "bg color
+"colorscheme sorcerer "bg color
+
+" show extra command info
+set showcmd
+
+" create temp files in ~/.vim-tmp and ~/.vim-swap (directories must exist)
+set backup
+set backupdir=~/.vim-tmp//
+set directory=~/.vim-swap//
+
+" enable cursor line highlighting, but for current window only
 set cursorline
+au WinLeave * set nocursorline
+au WinEnter * set cursorline
