@@ -21,20 +21,6 @@ set smarttab
 " line numbers are nice
 set nu
 
-"setup syntastic
-leg g:syntastic_mode_map = {
-	\ 'mode': 'passive',
-	\ 'active_filetypes': ['c','h','py','rst'],
-	\ 'passive_filetypes: []
-	\ }
-let g:syntastic_enable_signs = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_aggregate_errors = 0
-let g:syntastic_enable_balloons = 1
-let g:syntastic_c_remove_include_errors = 1
-"let g:syntastic_c_compiler = 'clang'
-
 " remap multiple-cursors key to be like Sublime
 let g:multi_cursor_use_default_mapping = 0
 let g:multi_cursor_next_key = '<C-d>'
@@ -62,3 +48,17 @@ set directory=~/.vim-swap//
 set cursorline
 au WinLeave * set nocursorline
 au WinEnter * set cursorline
+
+" setup syntastic
+leg g:syntastic_mode_map = {
+	\ 'mode': 'passive',
+	\ 'active_filetypes': ['c','h','py','rst'],
+	\ 'passive_filetypes: []
+	\ }
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_aggregate_errors = 0
+let g:syntastic_enable_balloons = 1
+let g:syntastic_c_remove_include_errors = 1
+"let g:syntastic_c_compiler = 'clang'
