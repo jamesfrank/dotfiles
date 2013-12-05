@@ -62,3 +62,22 @@ let g:syntastic_aggregate_errors = 0
 let g:syntastic_enable_balloons = 1
 let g:syntastic_c_remove_include_errors = 1
 "let g:syntastic_c_compiler = 'clang'
+
+" syntastic loc list toggle function (see http://stackoverflow.com/questions/17512794/toggle-error-location-panel-in-syntastic)
+function! ToggleErrors()
+    let old_last_winnr = winnr('$')
+    lclose
+    if old_last_winnr == winnr('$')
+        " Nothing was closed, open syntastic error location panel
+        Errors
+    endif
+endfunction
+
+" remap Ctrl+e to toggle loc list
+nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
+
+" setup tagbar shortcut
+map <F8> :TagbarToggle<cr>
+
+" resize windows automatically when terminal is resized (see https://groups.google.com/forum/#!topic/vim_dev/1EdgEKYtu58)
+autocmd VimResized * if &equalalways | wincmd = | endif
