@@ -50,7 +50,7 @@ au WinLeave * set nocursorline
 au WinEnter * set cursorline
 
 " setup syntastic
-leg g:syntastic_mode_map = {
+let g:syntastic_mode_map = {
 	\ 'mode': 'passive',
 	\ 'active_filetypes': ['c','h','py','rst'],
 	\ 'passive_filetypes: []
