@@ -1,2 +1,6 @@
+# use vi, I guess
 set editing-mode vi
+
+# case-sensitive tab complete is unhelpful
 set completion-ignore-case on
+set show-all-if-ambiguous on
