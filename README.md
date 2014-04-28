@@ -4,7 +4,7 @@ Just a collection of the settings I like to have on my machine.
 
 ### Installation
 
-Clone repo. You can place it wherever you like, but I like to keep it in ~/.dotfiles
+Clone repo
 
     git clone https://github.com/jamesfrank/Dotfiles.git ~/.dotfiles
     
