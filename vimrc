@@ -53,7 +53,7 @@ au WinEnter * set cursorline
 let g:syntastic_mode_map = {
 	\ 'mode': 'passive',
 	\ 'active_filetypes': ['c','h','py','rst'],
-	\ 'passive_filetypes: []
+	\ 'passive_filetypes': []
 	\ }
 let g:syntastic_enable_signs = 1
 let g:syntastic_auto_loc_list = 0
