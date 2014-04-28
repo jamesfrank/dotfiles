@@ -2,7 +2,7 @@
 imap jj <esc>
 
 " powerline looks much nicer this way
-let g:Powerline_symbols = 'unicode' " 'fancy' or 'unicode'
+"let g:Powerline_symbols = 'unicode' " 'fancy' or 'unicode'
 
 " lets powerline colors work
 set term=xterm-256color
