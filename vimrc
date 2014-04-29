@@ -81,3 +81,6 @@ map <F8> :TagbarToggle<cr>
 
 " resize windows automatically when terminal is resized (see https://groups.google.com/forum/#!topic/vim_dev/1EdgEKYtu58)
 autocmd VimResized * if &equalalways | wincmd = | endif
+
+" ultisnips is annoying
+let g:UltiSnipsExpandTrigger = '<f5>'

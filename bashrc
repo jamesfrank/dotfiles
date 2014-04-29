@@ -1,7 +1,7 @@
 # a few nice shortcuts
-alias ls='ls --color=auto'
-alias ll='ls -al --color=auto'
-alias la='ls -A --color=auto'
+alias ls='ls -G'
+alias ll='ls -alG'
+alias la='ls -AG'
 alias grep='grep --color=auto'
 alias ..='cd ..'
 alias lc='clear && ls'
