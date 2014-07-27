@@ -1,8 +1,18 @@
+set nocompatible
+
 " escape is too far from the home row
 imap jj <esc>
 
-" powerline looks much nicer this way
-"let g:Powerline_symbols = 'unicode' " 'fancy' or 'unicode'
+# configure powerline
+if $dotfiles_fancy_characters == '1'
+    let g:Powerline_symbols = 'unicode' " 'fancy' or 'unicode'
+else
+    let g:Powerline_symbols = 'compatible' " always use 'compatible'
+endif
+"let g:Powerline_symbols_override = {'BRANCH': [0x2213], 'LINE': 'L'}
+let g:Powerline_dividers_override = ['', '', '', '']
+let g:Powerline_colorscheme = 'solarized256'
+let g:Powerline_stl_path_style = 'relative'
 
 " lets powerline colors work
 set term=xterm-256color
@@ -82,5 +92,16 @@ map <F8> :TagbarToggle<cr>
 " resize windows automatically when terminal is resized (see https://groups.google.com/forum/#!topic/vim_dev/1EdgEKYtu58)
 autocmd VimResized * if &equalalways | wincmd = | endif
 
-" ultisnips is annoying
-let g:UltiSnipsExpandTrigger = '<f5>'
+" set syntax for SystemVerilog
+au BufNewFile,BufRead *.sv set syntax=verilog
+
+" disable visual bell
+set vb
+set t_vb=
+
+" ignore some types of files in ctrl-p
+set wildignore+=*.log
+
+" add aliases for hex editing
+:command ToHex %!xxd
+:command FromHex %!xxd -r
