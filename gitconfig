@@ -1,5 +1,3 @@
-# @todo Source file rather than symlinking per http://stackoverflow.com/questions/1557183/is-it-possible-to-include-a-file-in-your-gitconfig
-
 [color]
   branch = auto
   diff = auto
@@ -20,3 +18,4 @@
   untracked = cyan
 [alias]
   unstage = reset --
+  ignored = clean -ndX
