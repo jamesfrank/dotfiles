@@ -3,7 +3,7 @@ set nocompatible
 " escape is too far from the home row
 imap jj <esc>
 
-# configure powerline
+" configure powerline
 if $dotfiles_fancy_characters == '1'
     let g:Powerline_symbols = 'unicode' " 'fancy' or 'unicode'
 else
@@ -105,3 +105,6 @@ set wildignore+=*.log
 " add aliases for hex editing
 :command ToHex %!xxd
 :command FromHex %!xxd -r
+
+" ultisnips is annoying
+let g:UltiSnipsExpandTrigger = '<f5>'

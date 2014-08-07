@@ -8,7 +8,7 @@ alias lc='clear && ls'
 
 # starts up tmux in 256 colour mode for powerline and attaches to main session
 alias tmux='tmux -2'
-alias main_tmux='tmux attach -t main || tmux new_session -s main'
+alias main_tmux='tmux attach -t main || tmux new-session -s main'
 
 # ignore common commands in history
 export HISTIGNORE="&:ls:ll:ll.:l.:exit:clear:pwd"
