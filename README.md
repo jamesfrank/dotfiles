@@ -7,6 +7,13 @@ Just a collection of the settings I like to have on my machine.
 Clone repo
 
     git clone https://github.com/jamesfrank/Dotfiles.git ~/.dotfiles
+    cd ~/.dotfiles
+    
+#### Automated Setup
+
+    ./install.py
+    
+#### Manual Setup
     
 Source rc files
 
@@ -17,8 +24,17 @@ Symlink files that can't be sourced
 
     ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
     ln -s ~/.dotfiles/inputrc ~/.inputrc
-    ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+    
+Set up git config files
+
+    git config --global core.excludesfile ~/.dotfiles/gitignore
+    git config --global include.path ~/.dotfiles/gitconfig
     
 Add Vim backup and swap directories
 
-    mkdir ~/.vim-swap && mkdir ~/.vim-tmp
+    mkdir -p ~/.vim-swap
+    mkdir -p ~/.vim-tmp
+
+Create config file (modify this file to enable or disable various features)
+
+    cp dotfiles.cfg.default dotfiles.cfg
