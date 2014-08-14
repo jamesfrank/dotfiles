@@ -1,3 +1,14 @@
+# set up paths
+DOTFILES_PATH="${BASH_SOURCE[0]%/*}"
+INCLUDE_PATH="$DOTFILES_PATH/include"
+
+# get config options
+source $DOTFILES_PATH/dotfiles.cfg
+
+# source standard components
+source $DOTFILES_PATH/bash_alias
+alias when-changed=$INCLUDE_PATH/when-changed/when-changed
+
 # a few nice shortcuts
 alias ls='ls -G'
 alias ll='ls -alG'
