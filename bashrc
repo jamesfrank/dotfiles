@@ -9,20 +9,21 @@ source $DOTFILES_PATH/dotfiles.cfg
 source $DOTFILES_PATH/bash_alias
 alias when-changed=$INCLUDE_PATH/when-changed/when-changed
 
-# a few nice shortcuts
-alias ls='ls -G'
-alias ll='ls -alG'
-alias la='ls -AG'
-alias grep='grep --color=auto'
-alias ..='cd ..'
-alias lc='clear && ls'
+# pick prompt character based on config
+if [[ $dotfiles_fancy_characters == 1 ]]; then
+    prompt_glyph='>' # @todo fix this
+else
+    prompt_glyph='>'
+fi
 
-# starts up tmux in 256 colour mode for powerline and attaches to main session
-alias tmux='tmux -2'
-alias main_tmux='tmux attach -t main || tmux new_session -s main'
+# customize prompt
+color='\[\e[0;39m\]'
+reset='\[\e[0m\]'
+bold='\[\e[1m\]'
+export PS1="$color\h$reset $bold\W$prompt_glyph$reset "
 
 # ignore common commands in history
-export HISTIGNORE="&:ls:ll:ll.:l.:exit:clear:pwd"
+export HISTIGNORE="&:ls:ll:ll.:l.:exit:clear:c:pwd"
 
 # setup path for included scripts
 INCLUDE_PATH="${BASH_SOURCE[0]%/*}/include"
