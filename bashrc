@@ -3,7 +3,7 @@ DOTFILES_PATH="${BASH_SOURCE[0]%/*}"
 INCLUDE_PATH="$DOTFILES_PATH/include"
 
 # get config options
-source $DOTFILES_PATH/dotfiles.cfg
+#source $DOTFILES_PATH/dotfiles.cfg
 
 # source standard components
 source $DOTFILES_PATH/bash_alias
@@ -11,13 +11,13 @@ alias when-changed=$INCLUDE_PATH/when-changed/when-changed
 
 # pick prompt character based on config
 if [[ $dotfiles_fancy_characters == 1 ]]; then
-    prompt_glyph='>' # @todo fix this
+    prompt_glyph='❯'
 else
     prompt_glyph='>'
 fi
 
 # customize prompt
-color='\[\e[0;39m\]'
+color='\[\e[0;36m\]'
 reset='\[\e[0m\]'
 bold='\[\e[1m\]'
 export PS1="$color\h$reset $bold\W$prompt_glyph$reset "
