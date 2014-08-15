@@ -6,7 +6,7 @@ alias lc='clear && ls'
 
 alias show='pwd && echo "" && ll'
 
-alias c='clear
+alias c='clear'
 
 alias ..='cd ..'
 alias ...='cd ../..'
