@@ -5,6 +5,21 @@ INCLUDE_PATH="$DOTFILES_PATH/include"
 # get config options
 #source $DOTFILES_PATH/dotfiles.cfg
 
+# detect OS
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    DF_OS='linux'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    DF_OS='mac'
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+    DF_OS='cygwin'
+elif [[ "$OSTYPE" == "win32" ]]; then
+    DF_OS='windows'
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+    DF_OS='freebsd'
+else
+    DF_OS='unknown'
+fi
+
 # source standard components
 source $DOTFILES_PATH/bash_alias
 alias when-changed=$INCLUDE_PATH/when-changed/when-changed

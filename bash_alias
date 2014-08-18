@@ -1,7 +1,13 @@
 # general bash shortcuts
-alias ls='ls --color=auto'
-alias ll='ls -Alh --color=auto'
-alias la='ls -A --color =auto'
+if [[ $DF_OS == 'mac' ]]; then
+    alias ls='ls -G'
+    alias ll='ls -AlhG'
+    alias la='ls -AG'
+else
+    alias ls='ls --color=auto'
+    alias ll='ls -Alh --color=auto'
+    alias la='ls -A --color=auto'
+fi
 alias lc='clear && ls'
 
 alias show='pwd && echo "" && ll'
