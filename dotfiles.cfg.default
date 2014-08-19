@@ -1,0 +1,11 @@
+# colorize
+export dotfiles_colorize=1
+
+# bashmarks
+export dotfiles_bashmarks=1
+
+# fuzzy bash completion
+export dotfiles_fuzzy_completion=1
+
+# use fancy characters
+export dotfiles_fancy_characters=1
