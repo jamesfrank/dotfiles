@@ -12,7 +12,7 @@ def shell(command):
           print(out)
 
 # get root path for dotfiles repo
-root = os.path.dirname(os.path.realpath(__FILE__))
+root = os.path.dirname(os.path.realpath(__file__))
 
 # add source statements to rc files if they're not there already
 def source(type):
@@ -30,7 +30,7 @@ shell('git config --global core.excludesfile %s' % (os.path.join(root, "gitignor
 shell('git config --global include.path %s' % (os.path.join(root, "gitconfig")))
 
 # symlink files that can't be sourced
-proto = 'ln -sf %s ~/.%s' % (os.path.join(root, "%s"), "%s)
+proto = 'ln -sf %s ~/.%s' % (os.path.join(root, "%s"), "%s")
 shell(proto % ("tmux.conf", "tmux.conf"))
 shell(proto % ("inputrc", "inputrc"))
 
