@@ -1,5 +1,5 @@
 # set up paths
-DOTFILES_PATH="${BASH_SOURCE[0]%/*}"
+DOTFILES_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 INCLUDE_PATH="$DOTFILES_PATH/include"
 
 # get config options
