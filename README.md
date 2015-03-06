@@ -7,13 +7,14 @@ Just a collection of the settings I like to have on my machine.
 Clone repo
 
     git clone https://github.com/jamesfrank/Dotfiles.git ~/.dotfiles
-    cd ~/.dotfiles
     
 #### Automated Setup
 
-    ./install.py
+    ~/.dotfiles/install.py
     
 #### Manual Setup
+
+    cd ~/.dotfiles
     
 Source rc files
 
@@ -44,3 +45,4 @@ Create config file (modify this file to enable or disable various features)
 ### Vim Setup
 
     git clone https://github.com/drmikehenry/vimfiles.git ~/.vim
+    ~/.vim/setup.py
