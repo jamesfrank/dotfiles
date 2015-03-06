@@ -43,4 +43,4 @@ Create config file (modify this file to enable or disable various features)
 
 ### Vim Setup
 
-    git clone git@github.com:drmikehenry/vimfiles.git ~/.vim
+    git clone https://github.com/drmikehenry/vimfiles.git ~/.vim
