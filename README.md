@@ -38,3 +38,9 @@ Add Vim backup and swap directories
 Create config file (modify this file to enable or disable various features)
 
     cp dotfiles.cfg.default dotfiles.cfg
+
+## Optional Steps
+
+### Vim Setup
+
+    git clone git@github.com:drmikehenry/vimfiles.git ~/.vim
