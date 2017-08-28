@@ -18,11 +18,13 @@ root = os.path.dirname(os.path.realpath(__file__))
 
 # add source statements to rc files if they're not there already
 def source(targ, dest):
-    rc_path = os.path.expanduser("~/.%s" % (targ))
+    targ_path = os.path.expanduser("~/.%s" % (targ))
     source_cmd = "source %s" %(os.path.join(root, dest))
     
-    if source_cmd not in open(rc_path).read():
-        shell('echo "\n%s" >> %s' % (source_cmd, rc_path))
+    shell('touch %s' % (targ_path))
+    
+    if source_cmd not in open(targ_path).read():
+        shell('echo "\n%s" >> %s' % (source_cmd, targ_path))
         
 source("bashrc", "bashrc")
 source("bash_profile", "bashrc")
