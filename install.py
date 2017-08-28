@@ -25,6 +25,7 @@ def source(type):
         shell('echo "\n%s" >> %s' % (source_cmd, rc_path))
         
 source("bashrc")
+source("bash_profile")
 source("vimrc")
 
 # set up git config file includes
