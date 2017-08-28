@@ -17,16 +17,16 @@ def shell(command):
 root = os.path.dirname(os.path.realpath(__file__))
 
 # add source statements to rc files if they're not there already
-def source(type):
-    rc_path = os.path.expanduser("~/.%s" % (type))
-    source_cmd = "source %s" %(os.path.join(root, type))
+def source(targ, dest):
+    rc_path = os.path.expanduser("~/.%s" % (targ))
+    source_cmd = "source %s" %(os.path.join(root, dest))
     
     if source_cmd not in open(rc_path).read():
         shell('echo "\n%s" >> %s' % (source_cmd, rc_path))
         
-source("bashrc")
-source("bash_profile")
-source("vimrc")
+source("bashrc", "bashrc")
+source("bash_profile", "bashrc")
+source("vimrc", "vimrc")
 
 # set up git config file includes
 shell('git config --global core.excludesfile %s' % (os.path.join(root, "gitignore")))
