@@ -109,3 +109,6 @@ set wildignore+=*.log
 
 " ultisnips is annoying
 let g:UltiSnipsExpandTrigger = '<f5>'
+
+" this fixes something
+let g:LustyJugglerSuppressRubyWarning = 1
