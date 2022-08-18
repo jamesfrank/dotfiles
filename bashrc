@@ -57,3 +57,6 @@ if [[ $dotfilse_fuzzy_completion == 1 ]]; then
     fuzzy_replace_filedir_xspec
     fuzzy_setup_for_command cd
 fi
+
+# suppress macos zsh message
+export BASH_SILENCE_DEPRECATION_WARNING=1
