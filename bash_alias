@@ -1,5 +1,5 @@
 # general bash shortcuts
-if [[ $DF_OS == 'mac' ]]; then
+if [[ $DF_OS == 'mac' || $DF_OS == 'freebsd' ]]; then
     alias ls='ls -G'
     alias ll='ls -AlhG'
     alias la='ls -AG'
