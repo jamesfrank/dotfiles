@@ -3,7 +3,7 @@
 # @todo check for vimrc file and create it if necessary
 
 from __future__ import print_function
-import os, subprocess, shutil
+import os, subprocess, shutil, sys
 
 # shell command helper function
 def shell(command):
@@ -46,3 +46,6 @@ shell('mkdir -p ~/.vim-tmp')
 # create config file using default version
 proto = os.path.join(root, "%s")
 shutil.copyfile(proto % ("dotfiles.cfg.default"), proto %("dotfiles.cfg"))
+
+# exit cleanly
+sys.exit(0)
