@@ -1,5 +1,5 @@
 # colorize
-export dotfiles_colorize=1
+export dotfiles_colorize=0
 
 # bashmarks
 export dotfiles_bashmarks=1
