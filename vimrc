@@ -39,9 +39,9 @@ let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
 
 " set colorscheme
-colorscheme frankdark
+"colorscheme frankdark
 "colorscheme tir_black
-"colorscheme szakdark
+colorscheme szakdark
 "colorscheme neverness
 "colorscheme fu "bg color
 "colorscheme jellybeans "bg color
