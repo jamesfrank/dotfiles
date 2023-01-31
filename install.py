@@ -1,8 +1,7 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 # @todo check for vimrc file and create it if necessary
 
-from __future__ import print_function
 import os, subprocess, shutil, sys
 
 # shell command helper function
