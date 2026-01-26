@@ -42,7 +42,8 @@ alias mv='mv -i'
 alias tmux='tmux -2'
 
 # create or attach to main tmux session
-alias main_tmux='tmux attach -t main || tmux new-session -s main'
+#alias main_tmux='tmux attach -t main || tmux new-session -s main'
+alias tm='tmux new -A -s main'
 
 # attach to main tmux session with independent window
-alias indep_tmux='tmux new-session -t main'
+alias itm='tmux new-session -t main'
