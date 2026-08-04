@@ -1,0 +1,32 @@
+# Global git excludes (wired up via `git config --global core.excludesfile`).
+# Machine/OS/editor cruft that should never be committed to any repo.
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# Vim (matches this repo's ~/.vim-tmp / ~/.vim-swap dirs and stray swap files)
+*.swp
+*.swo
+*.un~
+Session.vim
+.netrwhist
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Common local noise
+*.log
+.env
+tags

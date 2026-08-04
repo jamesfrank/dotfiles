@@ -42,9 +42,10 @@ shell(proto % ("inputrc", "inputrc"))
 shell('mkdir -p ~/.vim-swap')
 shell('mkdir -p ~/.vim-tmp')
 
-# create config file using default version
+# create config file using default version (don't clobber an existing local config)
 proto = os.path.join(root, "%s")
-shutil.copyfile(proto % ("dotfiles.cfg.default"), proto %("dotfiles.cfg"))
+if not os.path.exists(proto % ("dotfiles.cfg")):
+    shutil.copyfile(proto % ("dotfiles.cfg.default"), proto %("dotfiles.cfg"))
 
 # exit cleanly
 sys.exit(0)
