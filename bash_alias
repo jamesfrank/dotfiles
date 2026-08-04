@@ -31,6 +31,21 @@ sshcd() {
     fi
 }
 
+# start/reuse an ssh-agent in this shell and load the default key
+# (useful in a session whose SSH_AUTH_SOCK isn't set, e.g. a reattached tmux pane)
+ssh-load() {
+    # ssh-add -l exits >=2 when no agent is reachable; only then start one
+    ssh-add -l &>/dev/null
+    if [[ $? -ge 2 ]]; then
+        eval "$(ssh-agent -s)" >/dev/null
+    fi
+    if [[ $DF_OS == 'mac' ]]; then
+        ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+    else
+        ssh-add ~/.ssh/id_ed25519
+    fi
+}
+
 # ring the bell
 alias ring_bell="echo -e '\a' || (echo -e '\a'; sleep 1; echo -e '\a')"
 alias rb='ring_bell'
