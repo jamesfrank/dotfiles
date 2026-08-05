@@ -1,8 +1,8 @@
 # general bash shortcuts
 if [[ $DF_OS == 'mac' || $DF_OS == 'freebsd' ]]; then
     alias ls='ls -G'
-    alias ll='ls -AlhG'
-    alias la='ls -AG'
+    alias ll='ls -Alh'
+    alias la='ls -A'
 else
     alias ls='ls --color=auto'
     alias ll='ls -Alh --color=auto'
@@ -17,7 +17,7 @@ alias c='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias prettypath="echo $PATH | tr ':' '\n'"
+alias prettypath='echo "$PATH" | tr ":" "\n"'
 
 # reload bashrc
 alias rebash='source $HOME/.bashrc'
@@ -25,7 +25,7 @@ alias rebash='source $HOME/.bashrc'
 # ssh somewhere and then cd to current directory
 sshcd() {
     if [ -n "$1" ]; then
-        ssh -t $1 "cd $(pwd); bash"
+        ssh -t "$1" "cd $(printf %q "$PWD"); bash"
     else
         echo "No hostname specified"
     fi
@@ -47,8 +47,8 @@ ssh-load() {
 }
 
 # ring the bell
-alias ring_bell="echo -e '\a' || (echo -e '\a'; sleep 1; echo -e '\a')"
-alias rb='ring_bell'
+alias ring-bell="echo -e '\a'"
+alias rb='ring-bell'
 
 # safety features
 alias mv='mv -i'
